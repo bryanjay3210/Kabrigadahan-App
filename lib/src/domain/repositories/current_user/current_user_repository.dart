@@ -1,0 +1,12 @@
+import 'package:kabrigadan_mobile/src/core/params/current_user/current_user_params.dart';
+import 'package:kabrigadan_mobile/src/core/resources/data_state.dart';
+import 'package:kabrigadan_mobile/src/domain/entities/current_user/current_user_entity.dart';
+
+abstract class CurrentUserRepository {
+  Future<DataState<CurrentUserEntity>> getCurrentUser(
+      CurrentUserParams? params);
+}
+
+abstract class MembersUnderCORepository {
+  Future<DataState<List<CurrentUserEntity>>> getAllMemberByCO(CurrentUserParams? params);
+}
